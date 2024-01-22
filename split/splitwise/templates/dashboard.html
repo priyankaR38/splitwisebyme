@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+<style>
+  /* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+nav ul li a:hover {
+  background-color: #eee;
+}
+
+main {
+  padding: 20px;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+ul {
+  margin-left: 20px;
+  list-style-type: square;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+
+
+</style>
+{% block content %}
+  <h1 style="color: rgb(12, 2, 48); text-align: center;">****************Dashboard*******************</h1>
+  <!-- {% if group_id %}
+    <h2>Group ID: {{ group_id }}</h2>
+     Display group-specific content here -->
+  <!-- {% else %}
+    <h2 style="color: aqua;">All Groups</h2>
+    Display content for all groups here -->
+  <!-- {% endif %} --> 
+  <br><br><br>
+  <h2 style="color: rgb(12, 5, 41); text-align: center;">Expenses</h2>
+  <ul>
+    {% for expense in expenses %}
+      <li>{{ expense.description }} - {{ expense.amount }}</li>
+    {% empty %}
+      <li>No expenses found.</li>
+    {% endfor %}
+  </ul>
+  <br><br><br>
+  <h2 style="color: rgb(13, 1, 29); text-align: center;">Settlements</h2>
+  <ul>
+    {% for settlement in settlements %}
+      <li>{{ settlement.user.username }} settled {{ settlement.amount }}</li>
+    {% empty %}
+      <li>No settlements found.</li>
+    {% endfor %}
+    <!-- {% for group in groups %}
+    <li> Add Member to {{ group.name }}</li>
+    {% endfor %} -->
+    <br><br><br>
+    <h2 style="color: rgb(11, 8, 55); text-align: center;">All Groups for Add Members</h2>
+    {% for group in groups %}
+    <h3>{{ group.name }}</h3>
+    <!-- Display group details -->
+
+    <a href="{% url 'add_group_member' group_id=group.id %}">Add Group Member</a>
+    <!-- Link to add a group member -->
+    {% endfor %}
+    <br><br><br>
+    <h2 style="color: rgb(13, 4, 35); text-align: center;">All Groups Details</h2>
+    {% for group in groups %}
+    <h3>{{ group.name }}</h3>
+    <!-- Display group details -->
+
+    <a href="{% url 'group_details' group_id=group.id %}">View Details</a>
+    <!-- Link to the group details page -->
+    {% endfor %}
+
+
+  </ul>
+{% endblock %}

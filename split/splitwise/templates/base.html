@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Splitwise App made by me</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'splitwise/static/css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'splitwise/static/css/style1.css' %}">
+  <!-- Add your CSS and JavaScript files here -->
+  
+  
+  <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+<style>
+  /* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+nav ul li a:hover {
+  background-color: #eee;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #f8f8f8;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <!-- Add your header content here -->
+    <h1>Splitwise App made by me</h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+        <li><a href="{% url 'create_expense' %}">Create Expense</a></li>
+        <li><a href="{% url 'create_group' %}">Create Group</a></li>
+       
+        
+          
+       
+
+        
+
+
+
+
+
+        
+        
+        
+        <!-- Add more navigation links as needed -->
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <!-- Add the main content of each page here -->
+    {% block content %}
+    {% endblock %}
+  </main>
+  
+  <footer>
+    <!-- Add your footer content here -->
+    <p>&copy; 2023 Splitwise App. All rights reserved.</p>
+  </footer>
+  
+  <!-- Add your JavaScript files here -->
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

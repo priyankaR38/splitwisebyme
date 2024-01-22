@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ group.name }}</h1>
+  <h2>Expenses:</h2>
+  <ul>
+    {% for expense in expenses %}
+      <li>{{ expense.description }} - {{ expense.amount }}</li>
+    {% empty %}
+      <li>No expenses found.</li>
+    {% endfor %}
+  </ul>
+  <h2>Add Group Member:</h2>
+  <form method="post" action="{% url 'add_group_member' group.id %}">
+    {% csrf_token %}
+    <label for="member_email">Member Email:</label>
+    <input type="email" name="member_email" id="member_email" required>
+    <button type="submit">Add Member</button>
+  </form>
+{% endblock %}

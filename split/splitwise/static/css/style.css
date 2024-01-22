@@ -1,0 +1,175 @@
+/* style.css */
+
+/* Add your custom CSS styles here */
+/* base.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* login.css */
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.login-form h2 {
+  text-align: center;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.login-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #428bca;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* dashboard.css */
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-group {
+  margin-bottom: 20px;
+}
+
+.dashboard-group h2 {
+  margin-bottom: 10px;
+}
+
+.dashboard-group a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #428bca;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* create_expense.css */
+.create-expense-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.create-expense-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.create-expense-form input[type="text"],
+.create-expense-form input[type="number"],
+.create-expense-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.create-expense-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #428bca;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* group_details.css */
+.group-details-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.group-details-expenses {
+  margin-bottom: 20px;
+}
+
+.group-details-expenses table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.group-details-expenses th,
+.group-details-expenses td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.group-details-expenses th {
+  background-color: #f2f2f2;
+}
+
+.group-details-expenses td {
+  text-align: center;
+}
+
+.group-details-back {
+  margin-bottom: 20px;
+}
+
+.group-details-back a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #428bca;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* add_group_member.css */
+.add-group-member-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.add-group-member-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.add-group-member-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.add-group-member-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #428bca;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Include additional CSS files for other templates as needed */
+
+  
+  /* Add more CSS styles as needed */
+  
